@@ -1,3 +1,14 @@
+//Chapter 3 Minimum
+//Write a function min that takes two arguements and returns their minimums
+const min = (num1, num2) => {
+  if (num1 > num2) {
+    return num2;
+  } else {
+    return num1;
+  }
+};
+console.log(min(200, 301));
+/*
 //Chapter 2 Fizz Buzz
 //Print all numbers from 1-100, print fizz for numbers divisible by 3
 //and print buzz for numbers divisible by 5(and not 3). Then print FizzBuzz for numbers that are
@@ -15,7 +26,6 @@ for (let i = 0; i <= 100; i++) {
     console.log(i);
   }
 }
-/*
 //Chapter 2 Exercise (for loop)
 let book = `0`;
 

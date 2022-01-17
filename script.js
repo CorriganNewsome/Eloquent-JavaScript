@@ -301,9 +301,11 @@ const calcAverage = (arr) => {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
-*/
 
+//DOM MANIPULAION 
+//Adding taking inputs and showing them in the console. 
 document.querySelector(".button").addEventListener("click", () => {
   let inputValue = document.querySelector(".input").value;
   console.log(inputValue);
 });
+*/

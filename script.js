@@ -215,3 +215,34 @@ for (let i = 0; i < corrigan.length; i++) {
   console.log(corrigan[i], typeof corrigan[i]);
 }
 */
+
+//LOOPS WITHIN LOOPS
+//Making a loop that has 3 sets of 5 exercises
+// i = sets, and j = exercises
+for (let i = 1; i <= 3; i++) {
+  console.log(`set #${i}`);
+  for (let j = 0; j <= 5; j++) {
+    console.log(`exercise #${j}`);
+  }
+}
+
+//LEARNING WHILE LOOPS
+//While loops will run while the condition 'what's in parenthesis' is true
+let i = 1;
+while (i <= 10) {
+  console.log(`Rep #${i}`);
+  i++;
+}
+
+//While loop is more versatile because it does not need a counter, it only needs a condition.
+//Example of a loops that doesn't need a counter
+//Rolling a dice
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`you rolled a ${dice}, the loop is about to end`);
+  }
+}

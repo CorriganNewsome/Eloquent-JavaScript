@@ -272,7 +272,6 @@ This is a DIFFICULT challenge (we haven't done this before)! Here is how to solv
   4.3. Call the function with the 'totals' array
 
 GOOD LUCK 😀
-*/
 //Solution
 const calcTip = (bill) => {
   if (bill >= 50 && bill <= 300) {
@@ -302,3 +301,4 @@ const calcAverage = (arr) => {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
+*/

@@ -309,3 +309,7 @@ document.querySelector(".button").addEventListener("click", () => {
   console.log(inputValue);
 });
 */
+let colorChange = () => {
+  var col = document.getElementById("content");
+  col.style.color = "#FF0000";
+};

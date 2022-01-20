@@ -327,7 +327,7 @@ document.querySelector('.guess').value = '3';
 console.log(document.querySelector('.guess').value);
 */
 
-const secretNumber = Math.trunc(Math.random() * 20 + 1);
+let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
 
 document.querySelector(".number").textContent = "?";
@@ -383,4 +383,8 @@ Implement a game rest functionality, so that the player can make a new guess! He
 GOOD LUCK 😀
 */
 
-document.querySelector("again").addEventListener("click", () => {});
+document.querySelector(".again").addEventListener("click", () => {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
+});
+console.log(secretNumber);

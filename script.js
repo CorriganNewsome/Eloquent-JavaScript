@@ -385,6 +385,11 @@ GOOD LUCK 😀
 
 document.querySelector(".again").addEventListener("click", () => {
   score = 20;
+  document.querySelector(".score").textContent = score;
   secretNumber = Math.trunc(Math.random() * 20 + 1);
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".guess").value = " ";
+  document.querySelector("body").style.backgroundColor = "rgb(162, 162, 194)";
+  document.querySelector(".number").textContent = "?";
 });
 console.log(secretNumber);

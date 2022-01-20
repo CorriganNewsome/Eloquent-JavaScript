@@ -391,5 +391,6 @@ document.querySelector(".again").addEventListener("click", () => {
   document.querySelector(".guess").value = " ";
   document.querySelector("body").style.backgroundColor = "rgb(162, 162, 194)";
   document.querySelector(".number").textContent = "?";
+  document.querySelector(".number").style.width = "15rem";
 });
 console.log(secretNumber);

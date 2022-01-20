@@ -329,6 +329,7 @@ console.log(document.querySelector('.guess').value);
 
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
 let score = 20;
+let highScore = 0;
 
 document.querySelector(".number").textContent = "?";
 
@@ -347,6 +348,10 @@ document.querySelector(".check").addEventListener("click", () => {
     //Increases the size of the secret number after winning
     document.querySelector(".number").style.width = "30rem";
     document.querySelector(".number").textContent = secretNumber;
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector(".highscore").textContent = score;
+    }
     //When guess is too high
   } else if (guess > secretNumber) {
     if (score > 0) {

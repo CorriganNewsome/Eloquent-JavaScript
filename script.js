@@ -32,24 +32,49 @@
 
 //The THIS keyword
 
-const calcAge = function (birthYear) {};
-calcAge(1993);
+// const calcAge = function (birthYear) {};
+// calcAge(1993);
 
-const calcAgeArrow = (birthYear) => {};
-calcAge(1993);
+// const calcAgeArrow = (birthYear) => {};
+// calcAge(1993);
 
+// const corrigan = {
+//   year: 1993,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2022 - this.year);
+//   },
+// };
+// corrigan.calcAge();
+// //the this keyword always points to the object calling the method
+// const matilda = {
+//   year: 2017,
+// };
+
+// matilda.calcAge = corrigan.calcAge;
+// matilda.calcAge();
+
+//REGULAR FUNCTIONS VS. ARROW FUNCTIONS
+
+/*
 const corrigan = {
+  firstName: "Corrigan",
   year: 1993,
   calcAge: function () {
     console.log(this);
     console.log(2022 - this.year);
+
+    const isMillenial = () => {
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: function () {
+    console.log(`Hey ${this.firstName}`);
   },
 };
-corrigan.calcAge();
-//the this keyword always points to the object calling the method
-const matilda = {
-  year: 2017,
-};
 
-matilda.calcAge = corrigan.calcAge;
-matilda.calcAge();
+corrigan.greet();
+corrigan.calcAge();
+*/

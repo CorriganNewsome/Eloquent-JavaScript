@@ -133,7 +133,7 @@ corrigan.calcAge();
 //Array Destructuring
 
 const restaurant = {
-  name: "Classico Italiano",
+  restaurantName: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
@@ -156,23 +156,64 @@ const restaurant = {
       close: 24,
     },
   },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+  orderDelievered: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(
+      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievered to ${address} at ${time}`
+    );
+  },
 };
-//How to destructure an array
-let [main, , secondary] = restaurant.categories;
+restaurant.orderDelievered({
+  time: "22:30",
+  address: "Via del Sole, 21",
+  starterIndex: 2,
+  mainIndex: 2,
+});
+//Destructuring objects
+const { restaurantName, openingHours, categories } = restaurant;
+console.log(restaurantName, openingHours, categories);
+//Renaming variables in an object
+const {
+  restaurantName: newName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
 
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
+console.log(tags);
+//Setting a default value (helpful when data is not hard coded/3rd party data)
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
 
-//Recieve 2 return values from a function
-const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
-//How to destructure an array within an array
-const nested = [2, 4, [5, 6]];
-// const [i, , j] = nested;
-// console.log(i, j);
-const [i, , [j, k]] = nested;
-console.log(i, j, k);
+//Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
 
-//Default values
-const [p = 1, q = 1, r = 1] = [8, 9];
-console.log(p, q, r);
+//Nested objects
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
+// //How to destructure an array
+// let [main, , secondary] = restaurant.categories;
+
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
+
+// //Recieve 2 return values from a function
+// const [starter, mainCourse] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
+// //How to destructure an array within an array
+// const nested = [2, 4, [5, 6]];
+// // const [i, , j] = nested;
+// // console.log(i, j);
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
+
+// //Default values
+// const [p = 1, q = 1, r = 1] = [8, 9];
+// console.log(p, q, r);

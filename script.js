@@ -78,3 +78,49 @@ const corrigan = {
 corrigan.greet();
 corrigan.calcAge();
 */
+// //Primitive Types
+// let age = 28;
+// let oldAge = age;
+// age = 29;
+// // console.log(age);
+// // console.log(oldAge);
+
+// const me = {
+//   name: "Corrigan",
+//   age: 29,
+// };
+// //Reference Types
+// const friend = me;
+// friend.age = 27;
+// // console.log("Friend", friend.age);
+// // console.log("me", me.age);
+
+//PRIMITIVES VS. OBJECTS IN PRACTICE
+// let lastName = "Williams";
+// let oldLastName = lastName;
+// lastName = "Davis";
+
+// const jessica = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
+// };
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = "Davis";
+// // console.log(`Before Marriage`, jessica);
+// // console.log("After Marriage", marriedJessica);
+
+// marriedJessica;
+
+//Copying Objects
+const jessica2 = {
+  firstName: "Jessica",
+  lastName: "Williams",
+  age: 27,
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = "Davis";
+console.log(`Before Marriage`, jessica2);
+console.log("After Marriage", jessicaCopy);

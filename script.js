@@ -219,64 +219,64 @@ corrigan.calcAge();
 // console.log(p, q, r);
 
 //Spread Operator
-const restaurant = {
-  restaurantName: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+// const restaurant = {
+//   restaurantName: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-  orderDelievered: function ({ starterIndex, mainIndex, time, address }) {
-    console.log(
-      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievered to ${address} at ${time}`
-    );
-  },
-  orderPasta: (ing1, ing2, ing3) => {
-    console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
-  },
-};
-const arr = [7, 8, 9];
-const newArr = [1, 2, ...arr];
-console.log(newArr);
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelievered: function ({ starterIndex, mainIndex, time, address }) {
+//     console.log(
+//       `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievered to ${address} at ${time}`
+//     );
+//   },
+//   orderPasta: (ing1, ing2, ing3) => {
+//     console.log(`Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
+//   },
+// };
+// const arr = [7, 8, 9];
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
 
-console.log(...newArr);
-//spread operator example
-const newMenu = [...restaurant.mainMenu, "Gonocci"];
-console.log(newMenu);
-//Creates a shallow copy of the mainMenu array in the restaurant object
-const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(...newArr);
+// //spread operator example
+// const newMenu = [...restaurant.mainMenu, "Gonocci"];
+// console.log(newMenu);
+// //Creates a shallow copy of the mainMenu array in the restaurant object
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-//Joining arrays together
-//spread operator takes all of the elements in the array and creates a new array.
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log(menu);
+// //Joining arrays together
+// //spread operator takes all of the elements in the array and creates a new array.
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
 
-const str = "Jonas";
-const letters = [...str, " ", "s"];
-console.log(letters);
+// const str = "Jonas";
+// const letters = [...str, " ", "s"];
+// console.log(letters);
 
-//Can only use the spread operator when building arrays or passing values into a function
-console.log(...str);
+// //Can only use the spread operator when building arrays or passing values into a function
+// console.log(...str);
 
 //real world example
 // const ingredients = [
@@ -289,10 +289,32 @@ console.log(...str);
 // restaurant.orderPasta(...ingredients);
 
 //Objects(spread operator)
-const newRestaurant = { ...restaurant, founder: "Guiseppe", foundedIn: 1998 };
+// const newRestaurant = { ...restaurant, founder: "Guiseppe", foundedIn: 1998 };
 
-const restaurantCopy = { ...restaurant };
-restaurantCopy.name = "Ristorante Roma";
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = "Ristorante Roma";
 
-console.log(restaurantCopy.name);
-console.log(restaurant.restaurantName);
+// console.log(restaurantCopy.name);
+// console.log(restaurant.restaurantName);
+
+//Rest Pattern and Parameters
+
+//SPREAD, because on the right side of =
+const arr = [1, 2, ...[3, 4]];
+
+//REST, because on the left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+
+//Functions(REST syntax)
+const addNumbers = (...numbers) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+addNumbers(2, 3);
+
+const x = [11, 22, 33];
+addNumbers(...x);

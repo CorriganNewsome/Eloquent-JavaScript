@@ -114,19 +114,19 @@ corrigan.calcAge();
 // marriedJessica;
 
 //Copying Objects
-const jessica2 = {
-  firstName: "Jessica",
-  lastName: "Williams",
-  age: 27,
-  family: ["Alice", "Bob"], //deeply assigned
-};
+// const jessica2 = {
+//   firstName: "Jessica",
+//   lastName: "Williams",
+//   age: 27,
+//   family: ["Alice", "Bob"], //deeply assigned
+// };
 
-const jessicaCopy = Object.assign({}, jessica2);
-jessicaCopy.lastName = "Davis";
-jessicaCopy.family.push("Mary");
-jessicaCopy.family.push("John");
-console.log(`Before Marriage`, jessica2);
-console.log("After Marriage", jessicaCopy);
+// const jessicaCopy = Object.assign({}, jessica2);
+// jessicaCopy.lastName = "Davis";
+// jessicaCopy.family.push("Mary");
+// jessicaCopy.family.push("John");
+// console.log(`Before Marriage`, jessica2);
+// console.log("After Marriage", jessicaCopy);
 
 //Deep Clone
 //Typically uses libraries to achieve this.

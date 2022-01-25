@@ -1,3 +1,4 @@
+"use strict";
 //Chapter 3
 //Recursion
 //Define a recursive function isEven corresponding to this description.
@@ -32,10 +33,10 @@ for (let i = 0; i <= 100; i++) {
   if (i % 3 === 0 && i % 5 !== 0) {
     console.log("fizz");
   }
-  if (i % 5 === 0 && i % 3 !== 0) {
+  else if (i % 5 === 0 && i % 3 !== 0) {
     console.log("buzz");
   }
-  if (i % 3 === 0 && i % 5 === 0) {
+  else if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizBuzz");
   } else {
     console.log(i);
@@ -49,7 +50,6 @@ for (let book = `#`; book.length <= 7; book = book + `#`) {
 }
 */
 
-"use strict";
 /*
 //LEARNING ARRAYS
 

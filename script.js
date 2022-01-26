@@ -299,22 +299,22 @@ corrigan.calcAge();
 
 //Rest Pattern and Parameters
 
-//SPREAD, because on the right side of =
-const arr = [1, 2, ...[3, 4]];
+// //SPREAD, because on the right side of =
+// const arr = [1, 2, ...[3, 4]];
 
-//REST, because on the left side of =
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-// console.log(a, b, others);
+// //REST, because on the left side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// // console.log(a, b, others);
 
-//Functions(REST syntax)
-const addNumbers = (...numbers) => {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  console.log(sum);
-};
-addNumbers(2, 3);
+// //Functions(REST syntax)
+// const addNumbers = (...numbers) => {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// };
+// addNumbers(2, 3);
 
-const x = [11, 22, 33];
-addNumbers(...x);
+// const x = [11, 22, 33];
+// addNumbers(...x);
